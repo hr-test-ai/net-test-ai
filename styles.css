@@ -77,6 +77,8 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-decoration: none;
+    display: block;
 }
 
 .nav-menu {
@@ -438,6 +440,11 @@ section {
 
 .benefit-card p {
     color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.benefit-card p:last-child {
+    margin-bottom: 0;
 }
 
 .value-proposition {

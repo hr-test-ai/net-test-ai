@@ -18,9 +18,9 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <span class="logo">
+                <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="R3C Logo">
-                </span>
+                </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <a href="#about" class="nav-link">Про нас</a>
@@ -52,7 +52,7 @@
                 Якісний трафік у шалених обсягах, професійна підтримка<br>
                 та індивідуальні умови співпраці.
             </p>
-            <button class="cta-button">
+            <button class="cta-button" onclick="scrollToSection('contact')">
                 <span>СТАТИ ПАРТНЕРОМ</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -83,23 +83,24 @@
 
 
     <!-- Partnership Section -->
-    <section class="partnership" id="partnership">
+    <section class="partnership" id="about">
         <div class="container">
-            <h2 class="section-title">ПАРТНЕРСТВО З R3C — ЦЕ:</h2>
+            <h2 class="section-title">ПРО R3C</h2>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-badge">01</div>
                     <div class="benefit-icon">🎯</div>
                     <h3>Високоякісний трафік</h3>
-                    <p>Постачаємо якісний трафік з трьох ключових джерел:Social, In-App, ASO Ми поєднуємо ці канали, щоб дати вам максимальне охоплення та 
-                        якісну аудиторію </p>
+                    <p>Постачаємо якісний трафік з трьох ключових джерел: <strong>Social</strong>, <strong>In-App</strong>, <strong>ASO</strong>.</p>
+                    <p>Ми поєднуємо ці канали, щоб дати вам максимальне охоплення та якісну аудиторію.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-badge">02</div>
                     <div class="benefit-icon">🌍</div>
                     <h3>Ефективна робота по ГЕО та джерелах</h3>
-                    <p>Маємо глибоку експертизу у просуванні на різних ринках та адаптуємо стратегії під специфіку кожного регіону.  Працюємо з країнами Tier 1, Tier 2 і Tier 3, враховуючи локальні особливості аудиторії та поведінки користувачів.</p>
+                    <p>Маємо глибоку експертизу у просуванні на різних ринках та адаптуємо стратегії під специфіку кожного регіону.</p>
+                    <p>Працюємо з країнами <strong>Tier 1</strong>, <strong>Tier 2</strong> i <strong>Tier 3</strong>, враховуючи локальні особливості аудиторії та поведінки користувачів.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -112,6 +113,20 @@
             </div>
             
 
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partnership" id="partnership">
+        <div class="container">
+            <h2 class="section-title">ПАРТНЕРСТВО З R3C</h2>
+            <p class="section-subtitle">Співпраця з нами - це гарантія успіху</p>
+            
+            <div class="partnership-content">
+                <div class="partnership-text">
+                    <p>Ми пропонуємо індивідуальний підхід до кожного партнера та гнучкі умови співпраці. Наша команда завжди готова допомогти вам досягти максимальних результатів.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -162,7 +177,7 @@
                         </div>
                         <div>
                             <h4>Business Developer</h4>
-                            <p>@aff_R3C1</p>
+                            <p><a href="https://t.me/aff_R3C1" target="_blank" class="contact-link">@aff_R3C1</a></p>
                         </div>
                     </div>
                     <div class="contact-item">

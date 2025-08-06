@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const href = this.getAttribute('href');
             
             // Если ссылка ведет на другую страницу, не блокируем переход
-            if (href.includes('.html') || href.startsWith('http') || href.includes('careers')) {
+            if (href.includes('.html') || href.startsWith('http') || href.includes('careers') || href.includes('index.html')) {
                 return; // Позволяем браузеру обработать переход
             }
             
