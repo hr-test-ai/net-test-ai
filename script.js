@@ -133,9 +133,22 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Simulate form submission
-        showNotification('Дякуємо за повідомлення! Ми зв\'яжемося з вами найближчим часом.', 'success');
-        contactForm.reset();
+        // Submit to Netlify Forms
+        const contactFormData = new FormData(contactForm);
+        
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(contactFormData).toString()
+        })
+        .then(() => {
+            showNotification('Повідомлення успішно надіслано! Ми зв\'яжемося з вами найближчим часом.', 'success');
+            contactForm.reset();
+        })
+        .catch((error) => {
+            console.error('Form submission error:', error);
+            showNotification('Помилка відправки. Спробуйте ще раз.', 'error');
+        });
     });
     
     // Newsletter form submission
@@ -357,40 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('R3C loaded successfully! 🔥');
 });
 
-const TOKEN = "";
-const CHAT_ID = "";
-const API = ``;
+// Removed legacy Telegram submission handler to avoid conflicts with Netlify Forms
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
 
-  const name = this.name.value;
-  const email = this.email.value;
-  const phone = this.phone.value;
-  const message = this.message.value;
-
-  const text = `📝 <b>Нова заявка:</b>\n\n👤 <b>Ім'я:</b> ${name}\n📧 <b>Email:</b> ${email}\n📱 <b>Телефон:</b> ${phone}\n💬 <b>Повідомлення:</b>\n${message}`;
-
-  fetch(API, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      chat_id: CHAT_ID,
-      text: text,
-      parse_mode: "HTML"
-    })
-  })
-  .then(res => {
-    if (res.ok) {
-      alert("✅ Повідомлення надіслано!");
-      this.reset();
-    } else {
-      alert("❌ Помилка при відправці.");
-    }
-  })
-  .catch(err => {
-    alert("❌ Помилка: " + err.message);
-  });
-});

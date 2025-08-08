@@ -185,7 +185,8 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" name="contact" method="POST" netlify>
+                    <input type="hidden" name="form-name" value="contact">
                     <input type="text" name="name" placeholder="Ваше ім'я" required>
                     <input type="email" name="email" placeholder="Ваш email" required>
                     <input type="text" name="company" placeholder="Номер телефона">
